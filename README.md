@@ -230,8 +230,8 @@ Review some of the common tips and suggestions [here](https://github.com/openshi
 
 To run this example from the Web UI, you can same steps following done on the CLI as defined above. Here's a video showing it in motion:
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=uocucZqg_0I&t=225" target="_blank">
-<img src="http://img.youtube.com/vi/uocucZqg_0I/0.jpg"
+<a href="https://www.youtube.com/watch?feature=player_embedded&v=uocucZqg_0I&t=225" target="_blank">
+<img src="https://img.youtube.com/vi/uocucZqg_0I/0.jpg"
 alt="OpenShift 3: Node.js Sample" width="240" height="180" border="10" /></a>
 
 ### Looking for help
