@@ -20,7 +20,7 @@ mongoPassword = process.env['password']
 mongoUser = process.env['username'];
 
 var uri = process.env['uri'];
-var mongodb_prefix = uri.substr(0,10);
+var mongodb_prefix = uri.substring(0,10);
 var mongodb_end = uri.substring(10,uri.count);
 mongoURL = mongodb_prefix + mongoUser + ':' + mongoPassword + '@' + mongodb_end;
 mongoURLLabel = mongoURL;
