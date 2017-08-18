@@ -12,18 +12,18 @@ app.use(morgan('combined'))
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
-    mongoURL = "",
+    mongoURL = process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGO_URL,
     mongoURLLabel = "";
 
-mongoDatabase = 'sampledb',
-mongoPassword = process.env['password']
-mongoUser = process.env['username'];
+var mongoDatabase = 'sampledb';
+var mongoPassword = process.env['password'];
+var mongoUser = process.env['username'];
 
 var uri = process.env['uri'];
 if(uri != null) {
   var mongodb_prefix = uri.substring(0,10);
   var mongodb_end = uri.substring(10,uri.count);
-  mongoURL = mongodb_prefix + mongoUser + ':' + mongoPassword + '@' + mongodb_end;
+  mongoURL = mongodb_prefix + mongoUser + ':' + mongoPassword + '@' + mongodb_end + '/' + mongoDatabase;
   mongoURLLabel = mongoURL;
 }
 
